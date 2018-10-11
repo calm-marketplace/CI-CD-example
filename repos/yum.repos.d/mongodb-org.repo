@@ -1,0 +1,7 @@
+[mongodb-org-3.4]
+name=MongoDB Repository
+#baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/
+baseurl=file:///home/tfindelkind/DevOps/CI-CD-example/repos/mongodb-org-3.4/RPMS/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
