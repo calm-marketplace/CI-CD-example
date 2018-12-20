@@ -1,22 +1,22 @@
-#curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o docker-compose
+curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o docker-compose
 
 ### Download and save Artifactory docker image
-#docker pull docker.bintray.io/jfrog/artifactory-oss:6.5.0
-#docker save -o artifactory_image.docker docker.bintray.io/jfrog/artifactory-oss
+docker pull docker.bintray.io/jfrog/artifactory-oss:6.5.0
+docker save -o artifactory_image.docker docker.bintray.io/jfrog/artifactory-oss
 
 ### Download and save NGINX docker image
-#docker pull nginx:1.9
-#docker save -o nginx_image.docker nginx
+docker pull nginx:1.9
+docker save -o nginx_image.docker nginx
 
 ### Download and save docker registry docker image
-#docker pull registry:2
-#docker save -o registry_image.docker registry
+docker pull registry:2
+docker save -o registry_image.docker registry
 
 ### Create app package
-#tar cvfz cicd-demo.tar.gz ../devops/
+tar cvfz cicd-demo.tar.gz ../devops/
 
 ### Download batchinstall script for Jenkins
-#curl -o batch-install-jenkins-plugins.sh https://raw.githubusercontent.com/ideadevice/calm-public-lib/master/Calm-Blueprints/Jenkins/batch-install-jenkins-plugins.sh
+curl -o batch-install-jenkins-plugins.sh https://raw.githubusercontent.com/ideadevice/calm-public-lib/master/Calm-Blueprints/Jenkins/batch-install-jenkins-plugins.sh
 sudo sed -i 's/http:\/\/updates.jenkins-ci.org\/stable\/update-center.json/http:\/\/updates.jenkins-ci.org\/update-center.json/' batch-install-jenkins-plugins.sh
 sudo chmod +x batch-install-jenkins-plugins.sh
 echo 'handlebars
