@@ -9,3 +9,6 @@ centosplus   2 min
 extras       2 min
 updates     10 min
 epel        60 min
+docker       1 min
+mongodb      1 min
+jenkins      1 min
