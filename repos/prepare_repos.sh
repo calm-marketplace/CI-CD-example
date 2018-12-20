@@ -13,6 +13,8 @@
 ### Docker-CE 
 #reposync -l --repoid=docker-ce-stable --download_path=. --downloadcomps --download-metadata
 
+###  Jenkins 
+#reposync -l --repoid=jenkins --download_path=. --downloadcomps --download-metadata
 
 #createrepo ./base/ -g comps.xml
 #createrepo ./centosplus/
@@ -20,6 +22,8 @@
 #createrepo ./updates/
 #createrepo ./epel/
 
-#createrepo ./mongodb-org-3.4/RPMS
+#createrepo ./mongodb-org-3.4/RPMS/
 
-createrepo ./docker-ce-stable/Packages
+#createrepo ./docker-ce-stable/Packages/
+
+createrepo ./jenkins/
